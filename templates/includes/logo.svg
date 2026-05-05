@@ -1,31 +1,45 @@
-<svg width="280" height="64" viewBox="0 0 280 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Saddam Shah Logo">
+<svg width="260" height="60" viewBox="0 0 280 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Saddam Shah Logo">
   <defs>
-    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#fbbf24"/>
-      <stop offset="100%" stop-color="#f59e0b"/>
+    <linearGradient id="logoAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d9ff"/>
+      <stop offset="100%" stop-color="#00a8cc"/>
     </linearGradient>
   </defs>
 
   <!-- Icon background -->
-  <rect x="0" y="0" width="64" height="64" rx="14" fill="#111827"/>
+  <rect x="1" y="1" width="62" height="62" rx="16" fill="#111827" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
 
   <!-- Left code bracket -->
-  <path d="M26 18 L18 32 L26 46" stroke="url(#accent)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M26 18 L18 32 L26 46"
+        stroke="url(#logoAccent)"
+        stroke-width="4"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
 
   <!-- Right code bracket -->
-  <path d="M38 18 L46 32 L38 46" stroke="url(#accent)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M38 18 L46 32 L38 46"
+        stroke="url(#logoAccent)"
+        stroke-width="4"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
 
   <!-- Name -->
-  <text x="80" y="30" font-size="20" font-weight="700"
+  <text x="80" y="30"
+        font-size="22"
+        font-weight="800"
         fill="#ffffff"
         font-family="Inter, Segoe UI, Arial, sans-serif">
     Saddam Shah
   </text>
 
   <!-- Subtitle -->
-  <text x="80" y="48" font-size="12" font-weight="500"
-        fill="#9ca3af"
+  <text x="80" y="49"
+        font-size="12.5"
+        font-weight="600"
+        fill="#b8c0cc"
         font-family="Inter, Segoe UI, Arial, sans-serif">
-    Full Stack Developer
+    Full-Stack Django Developer
   </text>
 </svg>
