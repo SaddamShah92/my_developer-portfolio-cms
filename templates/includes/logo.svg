@@ -1,4 +1,4 @@
-<svg width="260" height="60" viewBox="0 0 280 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Saddam Shah Logo">
+<svg width="auto" height="60" viewBox="0 0 299 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Saddam Shah Logo">
   <defs>
     <linearGradient id="logoAccent" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#00d9ff"/>
@@ -27,7 +27,7 @@
 
   <!-- Name -->
   <text x="80" y="30"
-        font-size="22"
+        font-size="25"
         font-weight="800"
         fill="#ffffff"
         font-family="Inter, Segoe UI, Arial, sans-serif">
@@ -35,8 +35,8 @@
   </text>
 
   <!-- Subtitle -->
-  <text x="80" y="49"
-        font-size="12.5"
+  <text x="80" y="54"
+        font-size="16"
         font-weight="600"
         fill="#b8c0cc"
         font-family="Inter, Segoe UI, Arial, sans-serif">

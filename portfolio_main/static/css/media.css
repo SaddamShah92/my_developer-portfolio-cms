@@ -51,14 +51,3 @@
     }
 }
 
-@media (max-width: 1199px) {
-    .brand-logo svg {
-        width: 220px;
-    }
-}
-
-@media (max-width: 575px) {
-    .brand-logo svg {
-        width: 190px;
-    }
-}
