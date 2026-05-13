@@ -1,12 +1,208 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
- </head>
- <body>
-    
-    
- </body>
- </html>
+<!-- Header Part  -->
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/media.css' %}">
+</head> 
+<body>
+ 
+
+<header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark portfolio-navbar">
+        <div class="container">
+
+            <!-- Logo -->
+            <a class="navbar-brand site-brand d-flex align-items-center mx-0" href="/">
+                <span class="brand-logo">
+                    {% include "includes/logo.svg" %}
+                </span>
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler custom-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav mx-lg-auto mb-2 mb-lg-0 portfolio-nav-links">
+
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="/">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link {% if '/about/' in request.path %}active{% endif %}" href="/about/">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link {% if '/services/' in request.path %}active{% endif %}" href="/services/">Services</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link {% if '/projects/' in request.path %}active{% endif %}" href="/projects/">Projects</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link {% if '/resume/' in request.path %}active{% endif %}" href="/resume/">Resume</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link {% if '/blog/' in request.path %}active{% endif %}" href="/blog/">Blog</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link {% if '/contact/' in request.path %}active{% endif %}" href="/contact/">Contact</a>
+                    </li>
+
+                </ul>
+
+                <!-- Hire Me Button -->
+                <div class="d-flex ms-lg-3">
+                    <a href="/contact/" class="btn btn-primary-custom navbar-cta">
+                        Hire Me
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+<!-- Main content part -->
+
+{% block content %}
+
+
+
+{% endblock %}
+
+<!-- Footer Part -->
+
+<footer class="site-footer">
+    <div class="container">
+
+        <div class="row g-5">
+
+            <!-- Brand / About -->
+            <div class="col-lg-4 col-md-6">
+                <a href="/" class="footer-brand text-decoration-none">
+                    Syed Saddam Shah<span>.</span>
+                </a>
+
+                <p class="footer-text mt-3">
+                    Full-Stack Python & Django Developer building scalable web applications,
+                    backend systems, business automation tools, and production-ready digital solutions.
+                </p>
+
+                <div class="footer-social d-flex gap-3 mt-4">
+                    <a href="https://github.com/SaddamShah92" target="_blank" rel="noopener" aria-label="GitHub">
+                        <i class="bi bi-github"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/syed-saddam-shah-a03229197" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+
+                    <a href="mailto:saddamshah415@gmail.com" aria-label="Email">
+                        <i class="bi bi-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-lg-2 col-md-6">
+                <h5 class="footer-heading">Quick Links</h5>
+
+                <ul class="footer-links list-unstyled">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about/">About</a></li>
+                    <li><a href="/services/">Services</a></li>
+                    <li><a href="/projects/">Projects</a></li>
+                    <li><a href="/resume/">Resume</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="footer-heading">Services</h5>
+
+                <ul class="footer-links list-unstyled">
+                    <li><a href="/services/">Django Web Development</a></li>
+                    <li><a href="/services/">Backend Development</a></li>
+                    <li><a href="/services/">Business Automation</a></li>
+                    <li><a href="/services/">Database-Driven Systems</a></li>
+                    <li><a href="/services/">Deployment & Support</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="footer-heading">Contact</h5>
+
+                <ul class="footer-contact list-unstyled">
+                    <li>
+                        <i class="bi bi-envelope"></i>
+                        <a href="mailto:saddamshah415@gmail.com">saddamshah415@gmail.com</a>
+                    </li>
+
+                    <li>
+                        <i class="bi bi-geo-alt"></i>
+                        <span>Lahore, Punjab, Pakistan</span>
+                    </li>
+
+                    <li>
+                        <i class="bi bi-briefcase"></i>
+                        <span>Available for Django projects</span>
+                    </li>
+                </ul>
+
+                <a href="/contact/" class="btn btn-outline-custom footer-hire-btn mt-3">
+                    Start a Project
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <div class="row align-items-center gy-3">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">
+                        &copy; {% now "Y" %} Syed Saddam Shah. All rights reserved.
+                    </p>
+                </div>
+
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">
+                        Designed & Developed with Django
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+</html>
