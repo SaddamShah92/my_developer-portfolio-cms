@@ -1,0 +1,1134 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- =========================================
+     RESUME HERO SECTION
+========================================== -->
+<section class="resume-hero-section min-vh-100 d-flex align-items-center py-5">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <!-- LEFT CONTENT -->
+            <div class="col-lg-7">
+
+                <p class="hero-label mb-3">
+                    Resume
+                </p>
+
+                <h1 class="hero-title mb-4">
+                    Syed Saddam Shah
+                </h1>
+
+                <h2 class="resume-role mb-4">
+                    Backend-Focused Django Developer
+                </h2>
+
+                <p class="hero-description mb-4">
+                    Backend-focused Django developer building scalable web applications,
+                    REST APIs, business automation systems, and production-ready backend solutions.
+                    Experienced in Django, Django REST Framework, React integration,
+                    JWT authentication, and workflow-driven business systems.
+                </p>
+
+                <!-- CTA BUTTONS -->
+                <div class="d-flex flex-wrap gap-3 mb-4">
+
+                    <a
+                        href="/media/resume/resume.pdf"
+                        class="btn btn-primary-custom btn-lg"
+                        target="_blank"
+                    >
+                        Download Resume
+                    </a>
+
+                    <a
+                        href="/contact/"
+                        class="btn btn-outline-custom btn-lg"
+                    >
+                        Hire Me
+                    </a>
+
+                </div>
+
+                <!-- QUICK HIGHLIGHTS -->
+                <div class="hero-highlights d-flex flex-wrap gap-3">
+
+                    <span>Django & Python</span>
+                    <span>REST API Development</span>
+                    <span>Business Automation</span>
+                    <span>React + DRF</span>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="col-lg-5">
+
+                <div class="profile-card mx-auto">
+
+                    <div class="profile-image-wrapper">
+
+                        <img
+                            src="{% static 'images/resume_profile.png' %}"
+                            alt="Syed Saddam Shah"
+                            class="img-fluid profile-image"
+                        >
+
+                    </div>
+
+                    <div class="profile-card-content mt-4 text-center">
+
+                        <h5 class="mb-2">
+                            Available For Opportunities
+                        </h5>
+
+                        <p class="mb-4">
+                            Open to Django development roles,
+                            backend engineering opportunities,
+                            and freelance projects.
+                        </p>
+
+                        <div class="tech-stack justify-content-center">
+
+                            <span>Django</span>
+                            <span>DRF</span>
+                            <span>React</span>
+                            <span>Automation</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     PROFESSIONAL SUMMARY
+========================================== -->
+<section class="section-padding intro-section">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <!-- LEFT CONTENT -->
+            <div class="col-lg-7">
+
+                <p class="section-label">
+                    Professional Summary
+                </p>
+
+                <h2 class="section-title">
+                    Building Backend Systems Focused On Real Business Workflows
+                </h2>
+
+                <p class="section-description mb-4">
+                    I specialize in developing scalable Django applications,
+                    REST APIs, and workflow-driven backend systems that solve
+                    practical business problems.
+                </p>
+
+                <p class="section-description mb-4">
+                    My background in operations support, UAT testing,
+                    AI-powered OCR validation, and workflow coordination
+                    gives me a strong understanding of how software systems
+                    function in real business environments.
+                </p>
+
+                <p class="section-description">
+                    I focus on clean architecture, maintainable code,
+                    structured backend systems, and scalable application design
+                    using Django, Django REST Framework, PostgreSQL,
+                    React integration, and automation-focused workflows.
+                </p>
+
+            </div>
+
+            <!-- RIGHT STATS -->
+            <div class="col-lg-5">
+
+                <div class="row g-4">
+
+                    <!-- CARD 1 -->
+                    <div class="col-sm-6">
+                        <div class="resume-stat-card h-100 text-center">
+
+                            <h2 class="resume-stat-number">
+                                10+
+                            </h2>
+
+                            <p class="resume-stat-text mb-0">
+                                Projects Built
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="col-sm-6">
+                        <div class="resume-stat-card h-100 text-center">
+
+                            <h2 class="resume-stat-number">
+                                4+
+                            </h2>
+
+                            <p class="resume-stat-text mb-0">
+                                Core Technologies
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="col-sm-6">
+                        <div class="resume-stat-card h-100 text-center">
+
+                            <h2 class="resume-stat-number">
+                                REST
+                            </h2>
+
+                            <p class="resume-stat-text mb-0">
+                                API Development
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <!-- CARD 4 -->
+                    <div class="col-sm-6">
+                        <div class="resume-stat-card h-100 text-center">
+
+                            <h2 class="resume-stat-number">
+                                AI
+                            </h2>
+
+                            <p class="resume-stat-text mb-0">
+                                Automation Focus
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     TECHNICAL SKILLS
+========================================== -->
+<section class="section-padding skills-section">
+
+    <div class="container">
+
+        <!-- SECTION HEADER -->
+        <div class="row justify-content-center text-center mb-5">
+
+            <div class="col-lg-8">
+
+                <p class="section-label">
+                    Technical Skills
+                </p>
+
+                <h2 class="section-title">
+                    Technologies & Engineering Capabilities
+                </h2>
+
+                <p class="section-description">
+                    My technical skill set focuses on backend engineering,
+                    scalable Django applications, REST API development,
+                    database-driven systems, and workflow automation.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- SKILLS GRID -->
+        <div class="row g-4">
+
+            <!-- BACKEND -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="skill-card h-100">
+
+                    <h4>
+                        Backend Engineering
+                    </h4>
+
+                    <ul>
+                        <li>Python</li>
+                        <li>Django</li>
+                        <li>Django REST Framework</li>
+                        <li>REST APIs</li>
+                        <li>JWT Authentication</li>
+                        <li>Django ORM</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- FRONTEND -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="skill-card h-100">
+
+                    <h4>
+                        Frontend Development
+                    </h4>
+
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>Bootstrap 5</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>Responsive Design</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- DATABASE -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="skill-card h-100">
+
+                    <h4>
+                        Database & Infrastructure
+                    </h4>
+
+                    <ul>
+                        <li>PostgreSQL</li>
+                        <li>MySQL</li>
+                        <li>SQLite3</li>
+                        <li>Database Modeling</li>
+                        <li>Deployment Basics</li>
+                        <li>Environment Variables</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- TOOLS -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="skill-card h-100">
+
+                    <h4>
+                        Tools & Automation
+                    </h4>
+
+                    <ul>
+                        <li>Git & GitHub</li>
+                        <li>Docker Basics</li>
+                        <li>N8N Automation</li>
+                        <li>Axios</li>
+                        <li>UAT Testing</li>
+                        <li>Workflow Systems</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     EXPERIENCE TIMELINE
+========================================== -->
+<section class="section-padding projects-section">
+
+    <div class="container">
+
+        <!-- SECTION HEADER -->
+        <div class="row justify-content-center text-center mb-5">
+
+            <div class="col-lg-8">
+
+                <p class="section-label">
+                    Professional Experience
+                </p>
+
+                <h2 class="section-title">
+                    My Professional Journey
+                </h2>
+
+                <p class="section-description">
+                    My background combines operations support,
+                    workflow systems, software testing,
+                    and backend-focused development experience.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- TIMELINE -->
+        <div class="resume-timeline">
+
+            <!-- EXPERIENCE ITEM -->
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <div class="timeline-header">
+
+                        <div>
+                            <h4>
+                                Virtual Assistant & Pre-Closing Coordinator
+                            </h4>
+
+                            <h5>
+                                Title Assistants
+                            </h5>
+                        </div>
+
+                        <span class="timeline-date">
+                            Jul 2025 — Present
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Supporting U.S.-based real estate workflows,
+                        transaction coordination, due diligence operations,
+                        and workflow management using automation-driven systems.
+                    </p>
+
+                    <ul class="timeline-list">
+
+                        <li>
+                            Managed transaction coordination and workflow tracking.
+                        </li>
+
+                        <li>
+                            Utilized Qualia automation systems to streamline operations.
+                        </li>
+
+                        <li>
+                            Coordinated with attorneys, lenders, and real estate professionals.
+                        </li>
+
+                    </ul>
+
+                    <div class="tech-stack">
+
+                        <span>Workflow Systems</span>
+                        <span>Qualia</span>
+                        <span>Operations</span>
+                        <span>Automation</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- EXPERIENCE ITEM -->
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <div class="timeline-header">
+
+                        <div>
+                            <h4>
+                                Virtual Assistant & Precloser
+                            </h4>
+
+                            <h5>
+                                TransData International
+                            </h5>
+                        </div>
+
+                        <span class="timeline-date">
+                            Feb 2024 — Jun 2025
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Managed workflow coordination,
+                        document verification,
+                        operational support,
+                        and process improvement initiatives.
+                    </p>
+
+                    <ul class="timeline-list">
+
+                        <li>
+                            Supported high-volume business operations and communications.
+                        </li>
+
+                        <li>
+                            Improved workflow coordination and documentation processes.
+                        </li>
+
+                        <li>
+                            Collaborated across technical and operational teams.
+                        </li>
+
+                    </ul>
+
+                    <div class="tech-stack">
+
+                        <span>Workflow Coordination</span>
+                        <span>Operations</span>
+                        <span>Documentation</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- EXPERIENCE ITEM -->
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <div class="timeline-header">
+
+                        <div>
+                            <h4>
+                                Testing Support & Collaboration Associate
+                            </h4>
+
+                            <h5>
+                                TransData International
+                            </h5>
+                        </div>
+
+                        <span class="timeline-date">
+                            Dec 2023 — Jan 2024
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Worked closely with development teams
+                        performing UAT testing,
+                        OCR validation,
+                        and workflow verification for automation systems.
+                    </p>
+
+                    <ul class="timeline-list">
+
+                        <li>
+                            Performed User Acceptance Testing on RPA systems.
+                        </li>
+
+                        <li>
+                            Validated AI-powered OCR processing outputs.
+                        </li>
+
+                        <li>
+                            Reported bugs and workflow inconsistencies to developers.
+                        </li>
+
+                    </ul>
+
+                    <div class="tech-stack">
+
+                        <span>UAT Testing</span>
+                        <span>OCR Validation</span>
+                        <span>RPA</span>
+                        <span>QA Workflow</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- EXPERIENCE ITEM -->
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <div class="timeline-header">
+
+                        <div>
+                            <h4>
+                                Customer Support Data Analyst & Tax Search Specialist
+                            </h4>
+
+                            <h5>
+                                TransData International
+                            </h5>
+                        </div>
+
+                        <span class="timeline-date">
+                            Jan 2020 — Dec 2023
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Specialized in data processing,
+                        customer support operations,
+                        workflow management,
+                        and real estate tax search systems.
+                    </p>
+
+                    <ul class="timeline-list">
+
+                        <li>
+                            Managed high-volume operational workflows and records.
+                        </li>
+
+                        <li>
+                            Conducted U.S. real estate tax search operations.
+                        </li>
+
+                        <li>
+                            Maintained workflow accuracy and process efficiency.
+                        </li>
+
+                    </ul>
+
+                    <div class="tech-stack">
+
+                        <span>Data Operations</span>
+                        <span>Workflow Systems</span>
+                        <span>Customer Support</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     FEATURED PROJECTS
+========================================== -->
+<section class="section-padding skills-section">
+
+    <div class="container">
+
+        <!-- SECTION HEADER -->
+        <div class="row justify-content-center text-center mb-5">
+
+            <div class="col-lg-8">
+
+                <p class="section-label">
+                    Featured Projects
+                </p>
+
+                <h2 class="section-title">
+                    Engineering-Focused Full-Stack Projects
+                </h2>
+
+                <p class="section-description">
+                    A selection of backend-focused applications,
+                    full-stack systems,
+                    and workflow-driven projects built using Django,
+                    Django REST Framework, React, and modern web technologies.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- PROJECTS GRID -->
+        <div class="row g-4">
+
+            <!-- PROJECT 1 -->
+            <div class="col-lg-6">
+
+                <div class="project-card h-100">
+
+                    <div class="placeholder-image">
+                        Full-Stack Architecture
+                    </div>
+
+                    <div class="project-content">
+
+                        <h4>
+                            Stock Prediction Portal
+                        </h4>
+
+                        <p>
+                            A full-stack authentication system built using
+                            React and Django REST Framework implementing
+                            JWT authentication, protected routes,
+                            token refresh workflows,
+                            and scalable API architecture.
+                        </p>
+
+                        <ul class="timeline-list">
+
+                            <li>
+                                Implemented JWT authentication with refresh token handling.
+                            </li>
+
+                            <li>
+                                Built reusable React authentication workflows and protected routes.
+                            </li>
+
+                            <li>
+                                Structured scalable DRF backend APIs with organized architecture.
+                            </li>
+
+                        </ul>
+
+                        <div class="tech-stack">
+
+                            <span>React</span>
+                            <span>Django REST Framework</span>
+                            <span>JWT</span>
+                            <span>Axios</span>
+                            <span>API Architecture</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- PROJECT 2 -->
+            <div class="col-lg-6">
+
+                <div class="project-card h-100">
+
+                    <div class="placeholder-image">
+                        Content Management
+                    </div>
+
+                    <div class="project-content">
+
+                        <h4>
+                            Django Blog Application
+                        </h4>
+
+                        <p>
+                            A dynamic blogging platform built using Django
+                            with authentication,
+                            content management,
+                            CRUD functionality,
+                            and responsive frontend implementation.
+                        </p>
+
+                        <ul class="timeline-list">
+
+                            <li>
+                                Developed complete CRUD functionality for content management.
+                            </li>
+
+                            <li>
+                                Integrated secure authentication workflows.
+                            </li>
+
+                            <li>
+                                Built responsive UI using Bootstrap and Django templates.
+                            </li>
+
+                        </ul>
+
+                        <div class="tech-stack">
+
+                            <span>Django</span>
+                            <span>Bootstrap</span>
+                            <span>SQLite</span>
+                            <span>Authentication</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- PROJECT 3 -->
+            <div class="col-lg-6">
+
+                <div class="project-card h-100">
+
+                    <div class="placeholder-image">
+                        Workflow System
+                    </div>
+
+                    <div class="project-content">
+
+                        <h4>
+                            Document Uploader System
+                        </h4>
+
+                        <p>
+                            A document management application allowing users
+                            to upload, manage,
+                            organize,
+                            and maintain records with associated metadata.
+                        </p>
+
+                        <ul class="timeline-list">
+
+                            <li>
+                                Implemented secure document upload workflows.
+                            </li>
+
+                            <li>
+                                Developed database-driven CRUD management system.
+                            </li>
+
+                            <li>
+                                Structured organized metadata and file management.
+                            </li>
+
+                        </ul>
+
+                        <div class="tech-stack">
+
+                            <span>Django</span>
+                            <span>File Uploads</span>
+                            <span>CRUD</span>
+                            <span>Database Design</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- PROJECT 4 -->
+            <div class="col-lg-6">
+
+                <div class="project-card h-100">
+
+                    <div class="placeholder-image">
+                        Career Platform
+                    </div>
+
+                    <div class="project-content">
+
+                        <h4>
+                            Career Bridge Web Application
+                        </h4>
+
+                        <p>
+                            A career-focused web application designed to connect users
+                            with career opportunities,
+                            resources,
+                            and structured content-driven workflows.
+                        </p>
+
+                        <ul class="timeline-list">
+
+                            <li>
+                                Built scalable Django application structure.
+                            </li>
+
+                            <li>
+                                Developed backend workflows using Django models and forms.
+                            </li>
+
+                            <li>
+                                Designed responsive frontend architecture.
+                            </li>
+
+                        </ul>
+
+                        <div class="tech-stack">
+
+                            <span>Django</span>
+                            <span>Bootstrap</span>
+                            <span>Forms</span>
+                            <span>Backend Logic</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     EDUCATION & LEARNING
+========================================== -->
+<section class="section-padding projects-section">
+
+    <div class="container">
+
+        <div class="row align-items-start g-5">
+
+            <!-- LEFT SIDE -->
+            <div class="col-lg-6">
+
+                <!-- EDUCATION -->
+                <div class="resume-info-card mb-4">
+
+                    <p class="section-label">
+                        Education
+                    </p>
+
+                    <h2 class="section-title mb-4">
+                        Academic Background
+                    </h2>
+
+                    <div class="education-item">
+
+                        <h4>
+                            Master of Computer Science (MCS)
+                        </h4>
+
+                        <h5>
+                            Virtual University of Pakistan
+                        </h5>
+
+                        <span class="education-date">
+                            2021 — 2023
+                        </span>
+
+                        <p>
+                            Relevant coursework included Data Structures,
+                            Database Systems,
+                            Software Engineering,
+                            Object-Oriented Programming,
+                            and Web Technologies.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CERTIFICATIONS -->
+                <div class="resume-info-card">
+
+                    <p class="section-label">
+                        Certifications
+                    </p>
+
+                    <h2 class="section-title mb-4">
+                        Professional Learning
+                    </h2>
+
+                    <div class="certification-item">
+
+                        <h4>
+                            Python Programming For Everybody
+                        </h4>
+
+                        <h5>
+                            Coursera
+                        </h5>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="col-lg-6">
+
+                <div class="resume-info-card h-100">
+
+                    <p class="section-label">
+                        Current Focus
+                    </p>
+
+                    <h2 class="section-title mb-4">
+                        Continuous Technical Growth
+                    </h2>
+
+                    <p class="section-description mb-4">
+                        I actively invest time in improving backend engineering,
+                        scalable system architecture,
+                        API development,
+                        deployment workflows,
+                        and intelligent automation systems.
+                    </p>
+
+                    <div class="row g-4">
+
+                        <!-- ITEM -->
+                        <div class="col-md-6">
+
+                            <div class="learning-card h-100">
+
+                                <h4>
+                                    Advanced Django
+                                </h4>
+
+                                <p>
+                                    Building scalable backend systems
+                                    with structured architecture and reusable workflows.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- ITEM -->
+                        <div class="col-md-6">
+
+                            <div class="learning-card h-100">
+
+                                <h4>
+                                    Django REST Framework
+                                </h4>
+
+                                <p>
+                                    Developing secure APIs,
+                                    authentication systems,
+                                    and scalable backend integrations.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- ITEM -->
+                        <div class="col-md-6">
+
+                            <div class="learning-card h-100">
+
+                                <h4>
+                                    React Integration
+                                </h4>
+
+                                <p>
+                                    Expanding full-stack development skills
+                                    through React and API-driven frontend systems.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- ITEM -->
+                        <div class="col-md-6">
+
+                            <div class="learning-card h-100">
+
+                                <h4>
+                                    AI Automation
+                                </h4>
+
+                                <p>
+                                    Exploring workflow automation,
+                                    N8N integrations,
+                                    and intelligent process systems.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     FINAL CTA
+========================================== -->
+<section class="cta-section py-5">
+
+    <div class="container">
+
+        <div class="cta-box text-center">
+
+            <p class="section-label">
+                Let’s Work Together
+            </p>
+
+            <h2>
+                Open To Django Development & Backend Engineering Opportunities
+            </h2>
+
+            <p>
+                I’m currently available for Django development,
+                backend engineering roles,
+                REST API development,
+                business automation systems,
+                and freelance web application projects.
+            </p>
+
+            <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+
+                <!-- DOWNLOAD RESUME -->
+                <a
+                    href="/media/resume/Resume.pdf"
+                    class="btn btn-primary-custom btn-lg"
+                    target="_blank"
+                    download
+                >
+                    Download Resume
+                </a>
+
+                <!-- CONTACT -->
+                <a
+                    href="/contact/"
+                    class="btn btn-outline-custom btn-lg"
+                >
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

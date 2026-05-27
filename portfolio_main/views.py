@@ -8,3 +8,9 @@ def about(request):
 
 def services(request):
     return render(request, 'services.html')
+
+def projects(request):
+    return render(request, 'projects.html')
+
+def resume(request):
+    return render(request, 'resume/resume.html')
