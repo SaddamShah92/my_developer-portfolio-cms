@@ -14,3 +14,4 @@ def projects(request):
 
 def resume(request):
     return render(request, 'resume/resume.html')
+
