@@ -8,7 +8,7 @@ def contact(request):
     
 
     context = {
-        'form' : form
+        'form' : form,  
     }
 
     return render(request, 'contact/contact.html', context)

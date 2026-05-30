@@ -724,3 +724,133 @@ body {
     transform: translateY(-4px);
     border-color: rgba(0, 217, 255, 0.35);
 }
+
+/* CONTACT PAGE */
+
+.contact-form-card{
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 2rem;
+}
+
+.contact-form-card input,
+.contact-form-card select,
+.contact-form-card textarea{
+    width: 100%;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    border-radius: 14px;
+    padding: 0.9rem 1rem;
+}
+
+.contact-form-card input:focus,
+.contact-form-card select:focus,
+.contact-form-card textarea:focus{
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: none;
+}
+
+.contact-benefits{
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.contact-benefits li{
+    padding: 0.9rem 0;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    color: var(--text-muted);
+}
+
+.contact-benefits li:last-child{
+    border-bottom: none;
+}
+
+/* =========================================
+   CONTACT FORM FIXES
+========================================= */
+
+.contact-form-card input,
+.contact-form-card textarea,
+.contact-form-card select {
+    width: 100%;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    border-radius: 14px;
+    padding: 0.9rem 1rem;
+}
+
+.contact-form-card input::placeholder,
+.contact-form-card textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.contact-form-card input:focus,
+.contact-form-card textarea:focus,
+.contact-form-card select:focus {
+    background: rgba(255,255,255,0.08);
+    border-color: var(--accent);
+    color: var(--text-main);
+    box-shadow: 0 0 0 0.15rem rgba(0, 217, 255, 0.15);
+}
+
+/* Select Dropdown */
+
+.contact-form-card select {
+    background-color: var(--bg-card);
+    color: var(--text-main);
+}
+
+/* Dropdown options */
+
+.contact-form-card select option {
+    background: var(--bg-card);
+    color: var(--text-main);
+}
+
+/* Django validation errors */
+
+.contact-form-card .errorlist {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.4rem;
+    margin-bottom: 0;
+    color: #ff6b6b;
+    font-size: 0.9rem;
+}
+
+/* Labels */
+
+.contact-form-card .form-label {
+    color: var(--text-main);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Success Alert */
+
+.alert-success {
+    background: rgba(25, 135, 84, 0.15);
+    border: 1px solid rgba(25, 135, 84, 0.35);
+    color: #75e6a4;
+    border-radius: 14px;
+}
+
+select option {
+    background: black;
+}
+
+.contact-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.contact-link:hover {
+    color: var(--accent);
+}
