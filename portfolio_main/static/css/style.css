@@ -732,9 +732,17 @@ body {
     border: 1px solid var(--border-color);
     border-radius: 24px;
     padding: 2rem;
+    
 }
 
 .contact-form-card input,
+.contact-form-card textarea {
+    color-scheme: dark;
+    box-shadow: 0 0 0 1000px var(--bg-card) inset !important;
+    -webkit-box-shadow: 0 0 0 1000px var(--bg-card) inset !important;
+}
+
+
 .contact-form-card select,
 .contact-form-card textarea{
     width: 100%;
@@ -853,4 +861,38 @@ select option {
 
 .contact-link:hover {
     color: var(--accent);
+}
+
+/* =========================
+   SUCCESS MESSAGE
+========================= */
+
+.custom-alert-success {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 217, 255, 0.12),
+            rgba(0, 217, 255, 0.04)
+        );
+
+    border: 1px solid rgba(0, 217, 255, 0.25);
+
+    border-radius: 18px;
+
+    padding: 1.25rem;
+}
+
+.custom-alert-success i {
+    color: var(--accent);
+    font-size: 1.4rem;
+}
+
+.custom-alert-success h5 {
+    color: var(--text-main);
+    font-weight: 700;
+}
+
+.custom-alert-success p {
+    color: var(--text-muted);
+    margin-bottom: 0;
 }
