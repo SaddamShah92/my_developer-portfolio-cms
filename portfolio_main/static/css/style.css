@@ -896,3 +896,11 @@ select option {
     color: var(--text-muted);
     margin-bottom: 0;
 }
+
+.tech-stack span {
+    cursor: pointer;
+}
+
+.tech-stack span:hover {
+    transform: translateY(-2px);
+}

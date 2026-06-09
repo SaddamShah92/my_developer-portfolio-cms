@@ -1,14 +1,20 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Blog
+from .models import Blog, Category
 
 
 def blog(request):
     posts = Blog.objects.filter(status = 'published')
     featured_post = Blog.objects.filter(is_featured = True, status = 'published').first()
 
+    if featured_post:
+        posts = posts.exclude(id=featured_post.id)
+
+    categories = Category.objects.all()
+
     context = {
         'posts': posts,
         'featured_post' : featured_post,
+        'categories' :  categories,
     }
 
     return render(request, 'blog/blog.html', context)
