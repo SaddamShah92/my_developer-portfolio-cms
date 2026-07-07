@@ -190,3 +190,18 @@
 
 }
 
+@media (max-width: 991px) {
+
+    .section-padding {
+        padding: 3rem 0;
+    }
+
+    .profile-image {
+        height: 320px;
+    }
+
+    .cta-box {
+        padding: 2rem 1.25rem;
+    }
+}
+
