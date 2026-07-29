@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'resume',
     'contact',
     'blog',
+    'django_ckeditor_5',
 ]
 
 MIDDLEWARE = [
@@ -142,3 +143,27 @@ EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+CKEDITOR_5_CONFIGS = {
+    "default": {
+        "toolbar": [
+            "heading",
+            "|",
+            "bold",
+            "italic",
+            "underline",
+            "link",
+            "|",
+            "bulletedList",
+            "numberedList",
+            "|",
+            "insertImage",
+            "blockQuote",
+            "insertTable",
+            "codeBlock",
+            "|",
+            "undo",
+            "redo",
+        ],
+    }
+}

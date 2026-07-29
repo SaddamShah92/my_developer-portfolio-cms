@@ -935,3 +935,181 @@ select option {
 .project-card:hover .project-image img{
     transform:scale(1.03);
 }
+
+.blog-content img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+
+    margin: 2rem auto;
+
+    border-radius: 16px;
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    box-shadow: 0 15px 40px rgba(0,0,0,.35);
+
+}
+
+.blog-content p{
+
+    color: var(--text-muted);
+
+    font-size:1.08rem;
+
+    line-height:1.9;
+
+    margin-bottom:1.5rem;    
+}
+
+.blog-content ul,
+.blog-content ol{
+
+    padding-left:1.5rem;
+
+    margin-bottom:1.5rem;
+}
+
+.blog-content li{
+
+    color:var(--text-muted);
+
+    margin-bottom:.7rem;
+}
+
+.blog-content blockquote{
+
+    border-left:4px solid var(--accent);
+
+    padding:1rem 1.5rem;
+
+    background:rgba(255,255,255,.03);
+
+    margin:2rem 0;
+
+    border-radius:10px;
+
+    color:var(--text-muted);
+
+    font-style:italic;
+}
+
+.blog-content a{
+
+    color:var(--accent);
+
+    text-decoration:none;
+}
+
+.blog-content a:hover{
+
+    text-decoration:underline;
+}
+
+/*=========================================
+BLOG META
+=========================================*/
+
+.blog-meta{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:1rem;
+
+    margin-top:2rem;
+
+    padding-top:1.5rem;
+
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+.meta-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:.6rem;
+
+    padding:.75rem 1rem;
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.06);
+
+    border-radius:12px;
+
+    color:var(--text-muted);
+
+    font-size:.95rem;
+}
+
+.meta-item i{
+
+    color:var(--accent);
+
+    font-size:1.1rem;
+}
+
+/*=========================================
+BLOG TAGS
+=========================================*/
+
+.blog-tags{
+
+    margin-top:4rem;
+
+    padding-top:2rem;
+
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+.blog-section-title{
+
+    color:var(--text-main);
+
+    font-size:1.1rem;
+
+    font-weight:600;
+
+    margin-bottom:1rem;
+}
+
+.tags-list{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:.75rem;
+}
+
+.tag-pill{
+
+    padding:.6rem 1rem;
+
+    border-radius:999px;
+
+    background:rgba(0,217,255,.08);
+
+    border:1px solid rgba(0,217,255,.18);
+
+    color:var(--accent);
+
+    font-size:.9rem;
+
+    font-weight:500;
+
+    transition:.3s ease;
+}
+
+.tag-pill:hover{
+
+    background:rgba(0,217,255,.15);
+
+    transform:translateY(-2px);
+}
+

@@ -22,7 +22,10 @@ def blog(request):
 def blog_detail(request, slug):
     post = get_object_or_404(Blog, slug = slug, status = 'published')
 
+    related_posts = Blog.objects.filter(status='published',category=post.category).exclude(id=post.id)[:3]
+
     context = {
         'post' : post,
+        'related_posts' : related_posts,
     }
     return render(request, 'blog/blog_detail.html', context)
