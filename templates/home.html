@@ -1,4 +1,9 @@
-{% extends 'base.html' %} {% block content %} {% load static %}
+{% extends 'base.html' %} 
+{% load static %}
+{% block title %}
+Home | Saddam Shah
+{% endblock %}
+{% block content %} 
 
 <!-- =========================
      Hero Section
@@ -43,7 +48,7 @@
         <div class="profile-card mx-auto">
           <div class="profile-image-wrapper">
             <img
-              src="{% static 'images/aboutnew.png' %}"
+              src="{% static 'images/home.webp' %}"
               alt="Syed Saddam Shah - Django Developer"
               class="img-fluid profile-image"
             />
@@ -276,7 +281,7 @@
         <div class="project-card h-100">
          <div class="project-image">
     <img
-        src="{% static 'images/projects/DjangoBlog.png' %}"
+        src="{% static 'images/projects/DjangoBlog.webp' %}"
         alt="Stock Prediction Portal"
         class="img-fluid"
     >
@@ -306,7 +311,7 @@
         <div class="project-card h-100">
          <div class="project-image">
     <img
-        src="{% static 'images/projects/stockPP.png' %}"
+        src="{% static 'images/projects/stockPP.webp' %}"
         alt="Stock Prediction Portal"
         class="img-fluid"
     >
@@ -336,7 +341,7 @@
         <div class="project-card h-100">
           <div class="project-image">
     <img
-        src="{% static 'images/projects/Docuploader.png' %}"
+        src="{% static 'images/projects/Docuploader.webp' %}"
         alt="Stock Prediction Portal"
         class="img-fluid"
     >

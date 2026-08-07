@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="64"
+     height="64"
+     viewBox="0 0 64 64"
+     fill="none">
+
+    <!-- Background -->
+    <rect
+        width="64"
+        height="64"
+        rx="14"
+        fill="#0B0F19"/>
+
+    <!-- Left bracket -->
+    <path
+        d="M25 18
+           L15 32
+           L25 46"
+        stroke="#00D9FF"
+        stroke-width="4"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+    <!-- Slash -->
+    <path
+        d="M35 16
+           L29 48"
+        stroke="#00D9FF"
+        stroke-width="4"
+        stroke-linecap="round"/>
+
+    <!-- Right bracket -->
+    <path
+        d="M39 18
+           L49 32
+           L39 46"
+        stroke="#00D9FF"
+        stroke-width="4"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+</svg>

@@ -1,7 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block title %}
+{{ post.seo_title|default:post.title }} | Saddam Shah
+{% endblock %}
 
 {% block content %}
+
+
 
 <!-- =========================================
      BLOG HERO
