@@ -3,7 +3,28 @@ from django.urls import path, include
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
+from django.http import HttpResponse
+from django.contrib.sitemaps.views import sitemap
+from .sitemaps import StaticViewSitemap, BlogSitemap
 
+def robots_txt(request):
+    content = """User-agent: *
+Allow: /
+
+Disallow: /admin/
+
+Sitemap: /sitemap.xml
+"""
+
+    return HttpResponse(
+        content,
+        content_type="text/plain"
+    )
+
+sitemaps = {
+    "static": StaticViewSitemap,
+    "blog": BlogSitemap,
+}
 
 
 urlpatterns = [
@@ -16,6 +37,8 @@ urlpatterns = [
     path('contact/', include('contact.urls')),
     path('blog/', include('blog.urls')),
     path("ckeditor5/", include("django_ckeditor_5.urls")),
+    path("robots.txt",robots_txt,name="robots"),
+    path("sitemap.xml",sitemap,{"sitemaps": sitemaps}, name="sitemap"),
 ]
 
 

@@ -1,7 +1,45 @@
 {% extends 'base.html' %}
+
 {% load static %}
+
 {% block title %}
 {{ post.seo_title|default:post.title }} | Saddam Shah
+{% endblock %}
+
+{% block meta_description %}
+{{ post.meta_description|default:post.short_description }}
+{% endblock %}
+
+{% block og_title %}
+{{ post.seo_title|default:post.title }} | Saddam Shah
+{% endblock %}
+
+{% block og_description %}
+{{ post.meta_description|default:post.short_description }}
+{% endblock %}
+
+{% block og_type %}
+article
+{% endblock %}
+
+{% block og_image %}
+{% if post.featured_image %}
+{{ request.scheme }}://{{ request.get_host }}{{ post.featured_image.url }}
+{% endif %}
+{% endblock %}
+
+{% block twitter_title %}
+{{ post.seo_title|default:post.title }} | Saddam Shah
+{% endblock %}
+
+{% block twitter_description %}
+{{ post.meta_description|default:post.short_description }}
+{% endblock %}
+
+{% block twitter_image %}
+{% if post.featured_image %}
+{{ request.scheme }}://{{ request.get_host }}{{ post.featured_image.url }}
+{% endif %}
 {% endblock %}
 
 {% block content %}

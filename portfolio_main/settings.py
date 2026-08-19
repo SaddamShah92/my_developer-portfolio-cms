@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'contact',
     'blog',
     'django_ckeditor_5',
+    'django.contrib.sitemaps',
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,184 @@
+{% extends 'base.html' %}
+
+{% block title %}
+404 | Saddam Shah
+{% endblock %}
+
+{% block content %}
+
+<!-- =========================================
+     404 ERROR PAGE
+========================================== -->
+
+<section class="hero-section d-flex align-items-center text-center py-5">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-8">
+
+                <!-- Error Code -->
+                <p class="hero-label mb-3">
+                    404 ERROR
+                </p>
+
+                <!-- Main Heading -->
+                <h1 class="hero-title mb-4">
+                    Oops! Page Not Found
+                </h1>
+
+                <!-- Description -->
+                <p class="hero-description mx-auto mb-4">
+                    The page you're looking for doesn't exist, may have been
+                    moved, or the URL might be incorrect.
+                </p>
+
+                <p class="section-description mx-auto mb-5">
+                    Don't worry — let's get you back to something useful.
+                </p>
+
+                <!-- Primary Actions -->
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+
+                    <a
+                        href="/"
+                        class="btn btn-primary-custom btn-lg"
+                    >
+                        Back to Home
+                    </a>
+
+                    <a
+                        href="/projects/"
+                        class="btn btn-outline-custom btn-lg"
+                    >
+                        View Projects
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     HELPFUL LINKS
+========================================== -->
+
+<section class="section-padding intro-section">
+
+    <div class="container">
+
+        <div class="row justify-content-center text-center">
+
+            <div class="col-lg-8">
+
+                <p class="section-label">
+                    Explore My Portfolio
+                </p>
+
+                <h2 class="section-title mb-4">
+                    Maybe You Were Looking For
+                </h2>
+
+                <p class="section-description mx-auto mb-5">
+                    Explore my work, services, experience, and development
+                    journey through the links below.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="row g-4 justify-content-center">
+
+            <!-- About -->
+            <div class="col-md-4">
+
+                <div class="why-card h-100 text-center">
+
+                    <h4>
+                        About Me
+                    </h4>
+
+                    <p>
+                        Learn more about my background, experience,
+                        and journey into software development.
+                    </p>
+
+                    <a
+                        href="/about/"
+                        class="card-link"
+                    >
+                        About Me →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Services -->
+            <div class="col-md-4">
+
+                <div class="why-card h-100 text-center">
+
+                    <h4>
+                        Services
+                    </h4>
+
+                    <p>
+                        Explore the Django development, backend,
+                        API, and automation solutions I provide.
+                    </p>
+
+                    <a
+                        href="/services/"
+                        class="card-link"
+                    >
+                        View Services →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Blog -->
+            <div class="col-md-4">
+
+                <div class="why-card h-100 text-center">
+
+                    <h4>
+                        Blog
+                    </h4>
+
+                    <p>
+                        Read practical articles about Django,
+                        backend development, APIs, and web engineering.
+                    </p>
+
+                    <a
+                        href="/blog/"
+                        class="card-link"
+                    >
+                        Visit Blog →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
