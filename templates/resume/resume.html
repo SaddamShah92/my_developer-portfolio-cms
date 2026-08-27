@@ -62,7 +62,7 @@ Explore Saddam Shah's professional experience, technical skills, Django projects
                 <div class="d-flex flex-wrap gap-3 mb-4">
 
                     <a
-                        href="/media/resume/resume.pdf"
+                        href="{% static 'documents/Resume.pdf' %}"
                         class="btn btn-primary-custom btn-lg"
                         target="_blank"
                     >
@@ -755,7 +755,7 @@ Explore Saddam Shah's professional experience, technical skills, Django projects
                     <div class="project-image">
     <img
         src="{% static 'images/projects/DjangoBlog.webp' %}"
-        alt="Stock Prediction Portal"
+        alt="Django Blog Application"
         class="img-fluid"
     >
 </div>
@@ -813,7 +813,7 @@ Explore Saddam Shah's professional experience, technical skills, Django projects
                     <div class="project-image">
     <img
         src="{% static 'images/projects/Docuploader.webp' %}"
-        alt="Stock Prediction Portal"
+        alt="Document Uploader System"
         class="img-fluid"
     >
 </div>
@@ -870,7 +870,7 @@ Explore Saddam Shah's professional experience, technical skills, Django projects
                     <div class="project-image">
     <img
         src="{% static 'images/projects/CareerB.webp' %}"
-        alt="Stock Prediction Portal"
+        alt="Career Bridge Web Application"
         class="img-fluid"
     >
 </div>
@@ -1138,9 +1138,14 @@ Explore Saddam Shah's professional experience, technical skills, Django projects
             <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
 
                 <!-- DOWNLOAD RESUME -->
-               <a href="{% static 'documents/Resume.pdf' %}" download>
-    Download Resume
-</a>
+                <a
+                    href="{% static 'documents/Resume.pdf' %}"
+                    class="btn btn-primary-custom btn-lg"
+                    target="_blank"
+
+                >
+                    Download Resume
+                </a>
 
                 <!-- CONTACT -->
                 <a
