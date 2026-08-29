@@ -1,19 +1,26 @@
+import resend
+
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from django.core.mail import send_mail
 from django.conf import settings
+
 from .forms import ContactForm
+
+resend.api_key = settings.RESEND_API_KEY
+
 
 def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
+
         if form.is_valid():
             inquiry = form.save()
 
-            send_mail(
-                subject=f"New Portfolio Inquiry from {inquiry.name}",
-
-                message=f"""
+            resend.Emails.send({
+                "from": "onboarding@resend.dev",
+                "to": [settings.EMAIL_HOST_USER],
+                "subject": f"New Portfolio Inquiry from {inquiry.name}",
+                "text": f"""
 Name: {inquiry.name}
 
 Email: {inquiry.email}
@@ -24,15 +31,7 @@ Message:
 
 {inquiry.message}
                 """,
-
-                from_email=settings.DEFAULT_FROM_EMAIL,
-
-                recipient_list=[
-                    settings.EMAIL_HOST_USER
-                ],
-
-                fail_silently=False
-            )
+            })
 
             messages.success(
                 request,
@@ -40,13 +39,12 @@ Message:
             )
 
             return redirect('contact')
+
     else:
         form = ContactForm()
 
     context = {
-        'form' : form,  
+        'form': form,
     }
 
     return render(request, 'contact/contact.html', context)
-
-

@@ -145,20 +145,9 @@ STORAGES = {
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-
-EMAIL_HOST = 'smtp.gmail.com'
-
-EMAIL_PORT = 587
-
-EMAIL_USE_TLS = True
+RESEND_API_KEY = config('RESEND_API_KEY')
 
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
-
-EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
-
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 CKEDITOR_5_CONFIGS = {
     "default": {
