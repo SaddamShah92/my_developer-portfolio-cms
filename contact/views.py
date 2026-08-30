@@ -24,11 +24,12 @@ def contact(request):
 
             logger.error("CONTACT STEP 2: inquiry saved")
 
-            resend.Emails.send({
-                "from": "onboarding@resend.dev",
-                "to": [settings.EMAIL_HOST_USER],
-                "subject": f"New Portfolio Inquiry from {inquiry.name}",
-                "text": f"""
+            try:
+                resend.Emails.send({
+                    "from": "onboarding@resend.dev",
+                    "to": [settings.EMAIL_HOST_USER],
+                    "subject": f"New Portfolio Inquiry from {inquiry.name}",
+                    "text": f"""
 Name: {inquiry.name}
 
 Email: {inquiry.email}
@@ -38,8 +39,15 @@ Company: {inquiry.company}
 Message:
 
 {inquiry.message}
-                """,
-            })
+                    """,
+                })
+
+            except Exception as e:
+                print(
+                    f"RESEND ERROR: {type(e).__name__}: {e}",
+                    flush=True
+                )
+                raise
 
             logger.error("CONTACT STEP 3: resend sent")
 
@@ -56,5 +64,7 @@ Message:
     return render(
         request,
         'contact/contact.html',
-        {'form': form}
+        {
+            'form': form,
+        }
     )
