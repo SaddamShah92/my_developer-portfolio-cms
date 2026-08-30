@@ -1,4 +1,3 @@
-import logging
 import resend
 
 from django.shortcuts import render, redirect
@@ -8,8 +7,6 @@ from django.conf import settings
 from .forms import ContactForm
 
 
-logger = logging.getLogger(__name__)
-
 resend.api_key = settings.RESEND_API_KEY
 
 
@@ -18,18 +15,13 @@ def contact(request):
         form = ContactForm(request.POST)
 
         if form.is_valid():
-            logger.error("CONTACT STEP 1: form valid")
-
             inquiry = form.save()
 
-            logger.error("CONTACT STEP 2: inquiry saved")
-
-            try:
-                resend.Emails.send({
-                    "from": "onboarding@resend.dev",
-                    "to": [settings.EMAIL_HOST_USER],
-                    "subject": f"New Portfolio Inquiry from {inquiry.name}",
-                    "text": f"""
+            resend.Emails.send({
+                "from": "onboarding@resend.dev",
+                "to": [settings.CONTACT_EMAIL],
+                "subject": f"New Portfolio Inquiry from {inquiry.name}",
+                "text": f"""
 Name: {inquiry.name}
 
 Email: {inquiry.email}
@@ -39,17 +31,8 @@ Company: {inquiry.company}
 Message:
 
 {inquiry.message}
-                    """,
-                })
-
-            except Exception as e:
-                print(
-                    f"RESEND ERROR: {type(e).__name__}: {e}",
-                    flush=True
-                )
-                raise
-
-            logger.error("CONTACT STEP 3: resend sent")
+                """,
+            })
 
             messages.success(
                 request,
@@ -61,10 +44,8 @@ Message:
     else:
         form = ContactForm()
 
-    return render(
-        request,
-        'contact/contact.html',
-        {
-            'form': form,
-        }
-    )
+    context = {
+        'form': form,
+    }
+
+    return render(request, 'contact/contact.html', context)
