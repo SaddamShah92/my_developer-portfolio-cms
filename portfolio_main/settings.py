@@ -147,7 +147,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 RESEND_API_KEY = config('RESEND_API_KEY')
 
-EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+CONTACT_EMAIL  = config('CONTACT_EMAIL')
 
 CKEDITOR_5_CONFIGS = {
     "default": {
