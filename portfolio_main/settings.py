@@ -34,6 +34,11 @@ ALLOWED_HOSTS = config(
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://saddamshah.com',
+    'https://www.saddamshah.com',
+]
+
 # Application definition
 
 INSTALLED_APPS = [
