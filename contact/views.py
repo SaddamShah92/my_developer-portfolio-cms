@@ -18,7 +18,7 @@ def contact(request):
             inquiry = form.save()
 
             resend.Emails.send({
-                "from": "onboarding@resend.dev",
+                "from": "Portfolio Contact <contact@saddamshah.com>",
                 "to": [settings.CONTACT_EMAIL],
                 "subject": f"New Portfolio Inquiry from {inquiry.name}",
                 "text": f"""
