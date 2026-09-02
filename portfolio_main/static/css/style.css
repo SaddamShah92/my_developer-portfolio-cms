@@ -742,14 +742,33 @@ body {
 
 /* CONTACT PAGE */
 
-.contact-form-card{
+.contact-form-card {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: 24px;
     padding: 2rem;
-    
+    height: 100%;
 }
 
+/* Reduce oversized contact heading */
+.contact-form-card .section-title {
+    font-size: clamp(2.5rem, 4vw, 3.2rem);
+    line-height: 1.1;
+}
+
+/* Inputs, textarea, select */
+.contact-form-card input,
+.contact-form-card textarea,
+.contact-form-card select {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    border-radius: 14px;
+    padding: 0.9rem 1rem;
+}
+
+/* Keep autofill/input background consistent in dark mode */
 .contact-form-card input,
 .contact-form-card textarea {
     color-scheme: dark;
@@ -757,86 +776,43 @@ body {
     -webkit-box-shadow: 0 0 0 1000px var(--bg-card) inset !important;
 }
 
-
-.contact-form-card select,
-.contact-form-card textarea{
-    width: 100%;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid var(--border-color);
-    color: var(--text-main);
-    border-radius: 14px;
-    padding: 0.9rem 1rem;
-}
-
-.contact-form-card input:focus,
-.contact-form-card select:focus,
-.contact-form-card textarea:focus{
-    outline: none;
-    border-color: var(--accent);
-    box-shadow: none;
-}
-
-.contact-benefits{
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 0;
-}
-
-.contact-benefits li{
-    padding: 0.9rem 0;
-    border-bottom: 1px solid rgba(255,255,255,.08);
-    color: var(--text-muted);
-}
-
-.contact-benefits li:last-child{
-    border-bottom: none;
-}
-
-/* =========================================
-   CONTACT FORM FIXES
-========================================= */
-
-.contact-form-card input,
-.contact-form-card textarea,
-.contact-form-card select {
-    width: 100%;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid var(--border-color);
-    color: var(--text-main);
-    border-radius: 14px;
-    padding: 0.9rem 1rem;
-}
-
+/* Placeholder */
 .contact-form-card input::placeholder,
 .contact-form-card textarea::placeholder {
     color: var(--text-muted);
 }
 
+/* Focus state */
 .contact-form-card input:focus,
 .contact-form-card textarea:focus,
 .contact-form-card select:focus {
-    background: rgba(255,255,255,0.08);
+    background: rgba(255, 255, 255, 0.08);
     border-color: var(--accent);
     color: var(--text-main);
+    outline: none;
     box-shadow: 0 0 0 0.15rem rgba(0, 217, 255, 0.15);
 }
 
 /* Select Dropdown */
-
 .contact-form-card select {
     background-color: var(--bg-card);
     color: var(--text-main);
 }
 
-/* Dropdown options */
-
-.contact-form-card select option {
-    background: var(--bg-card);
+.contact-form-card select option,
+select option {
+    background: black;
     color: var(--text-main);
 }
 
-/* Django validation errors */
+/* Labels */
+.contact-form-card .form-label {
+    color: var(--text-main);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
 
+/* Django validation errors */
 .contact-form-card .errorlist {
     list-style: none;
     padding-left: 0;
@@ -846,16 +822,34 @@ body {
     font-size: 0.9rem;
 }
 
-/* Labels */
+/* Why Work With Me card */
+.why-card {
+    height: 100%;
+}
 
-.contact-form-card .form-label {
-    color: var(--text-main);
-    font-weight: 600;
-    margin-bottom: 0.5rem;
+.why-card h3 {
+    font-size: clamp(2rem, 3vw, 2.6rem);
+    line-height: 1.2;
+}
+
+/* Benefits list */
+.contact-benefits {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.contact-benefits li {
+    padding: 0.9rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--text-muted);
+}
+
+.contact-benefits li:last-child {
+    border-bottom: none;
 }
 
 /* Success Alert */
-
 .alert-success {
     background: rgba(25, 135, 84, 0.15);
     border: 1px solid rgba(25, 135, 84, 0.35);
@@ -863,10 +857,7 @@ body {
     border-radius: 14px;
 }
 
-select option {
-    background: black;
-}
-
+/* Contact links */
 .contact-link {
     color: var(--text-muted);
     text-decoration: none;
