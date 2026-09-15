@@ -47,6 +47,7 @@ body {
 }
 
 .hero-title {
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
   line-height: 1.05;
   font-weight: 800;
   color: var(--text-main);
@@ -161,7 +162,7 @@ body {
 }
 
 .section-title {
-  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-size: clamp(2rem, 3vw, 2.8rem);
   font-weight: 800;
   color: var(--text-main);
   margin-bottom: 1rem;

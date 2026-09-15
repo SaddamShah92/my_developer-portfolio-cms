@@ -193,15 +193,15 @@ Django developer building practical web applications, REST APIs, backend systems
 ========================== -->
 <section class="section-padding skills-section">
   <div class="container">
-    <div class="row align-items-end mb-5">
+    <div class="row justify-content-center mb-5">
       <div class="col-lg-8">
-        <p class="section-label">Technical Skills</p>
+        <p class="section-label row justify-content-center ">Technical Skills</p>
 
-        <h2 class="section-title">
+        <h2 class="section-title text-center">
           Technologies I Use To Build Modern Applications
         </h2>
 
-        <p class="section-description">
+        <p class="section-description text-center">
           My primary focus is backend development with Django and Django REST
           Framework, while also building responsive user interfaces, working
           with databases, and exploring automation technologies.
@@ -281,22 +281,25 @@ Django developer building practical web applications, REST APIs, backend systems
 ========================== -->
 <section class="section-padding projects-section">
   <div class="container">
-    <div class="row justify-content-between align-items-end mb-5">
-      <div class="col-lg-7">
-        <p class="section-label">Featured Projects</p>
-        <h2 class="section-title">Selected Work & Case Studies</h2>
-        <p class="section-description">
-          A selection of Django and full-stack projects focused on real-world
-          workflows, admin systems, business logic, and scalable application
-          structure.
-        </p>
-      </div>
-      <div class="col-lg-3 text-lg-end mt-3 mt-lg-0">
-        <a href="/projects/" class="btn btn-outline-custom"
-          >View All Projects</a
-        >
-      </div>
-    </div>
+  <div class="row justify-content-center text-center mb-5">
+  <div class="col-lg-8 col-xl-7">
+    <p class="section-label">Featured Projects</p>
+
+    <h2 class="section-title">
+      Selected Work & Case Studies
+    </h2>
+
+    <p class="section-description mx-auto">
+      A selection of Django and full-stack projects focused on real-world
+      workflows, admin systems, business logic, and scalable application
+      structure.
+    </p>
+
+    <a href="/projects/" class="btn btn-outline-custom mt-3">
+      View All Projects
+    </a>
+  </div>
+</div>
 
     <div class="row g-4">
       <div class="col-lg-4 col-md-6">
@@ -534,69 +537,77 @@ Django developer building practical web applications, REST APIs, backend systems
 ========================== -->
 <section class="section-padding blog-section">
   <div class="container">
-    <div class="row justify-content-between align-items-end mb-5">
-      <div class="col-lg-7">
-        <p class="section-label">Latest Articles</p>
+    <div class="row justify-content-center text-center mb-5">
+  <div class="col-lg-8 col-xl-7">
+    <p class="section-label">Latest Articles</p>
 
-        <h2 class="section-title">
-          Sharing My Journey In Development & Technology
-        </h2>
+    <h2 class="section-title">
+      Sharing My Journey In Development & Technology
+    </h2>
 
-        <p class="section-description">
-          I write about Django development, project building, career
-          transitions, software engineering concepts, and lessons learned while
-          growing as a developer.
-        </p>
-      </div>
-      <div class="col-lg-3 text-lg-end mt-3 mt-lg-0">
-        <a href="/blog/" class="btn btn-outline-custom">Visit Blog</a>
-      </div>
-    </div>
+    <p class="section-description mx-auto">
+      I write about Django development, project building, career
+      transitions, software engineering concepts, and lessons learned while
+      growing as a developer.
+    </p>
+
+    <a href="/blog/" class="btn btn-outline-custom mt-3">
+      Visit Blog
+    </a>
+  </div>
+</div>
 
     <div class="row g-4">
-      <div class="col-lg-4 col-md-6">
-        <article class="blog-card h-100">
-          <p class="blog-meta">Django • Development</p>
+  {% for post in latest_posts %}
+    <div class="col-lg-4 col-md-6">
+      <article class="blog-card h-100">
 
-          <h4>How I Built My Django Portfolio Website</h4>
+        {% if post.featured_image %}
+          <div class="blog-card-image">
+            <img
+              src="{{ post.featured_image.url }}"
+              alt="{{ post.title }}"
+              class="img-fluid"
+            >
+          </div>
+        {% endif %}
 
-          <p>
-            A behind-the-scenes look at planning, developing, and deploying my
-            personal portfolio using Django and Bootstrap.
+        <div class="blog-card-content">
+
+          <p class="blog-meta">
+            {% if post.category %}
+              {{ post.category }}
+            {% endif %}
+
+            {% if post.reading_time %}
+              • {{ post.reading_time }} min read
+            {% endif %}
           </p>
 
-          <a href="/blog/" class="card-link"> Read Article → </a>
-        </article>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <article class="blog-card h-100">
-          <p class="blog-meta">Career Growth</p>
-
-          <h4>Transitioning From Operations To Software Development</h4>
+          <h4>{{ post.title }}</h4>
 
           <p>
-            Lessons learned while moving from workflow management and support
-            roles into professional software development.
+            {{ post.short_description|truncatewords:22 }}
           </p>
 
-          <a href="/blog/" class="card-link"> Read Article → </a>
-        </article>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <article class="blog-card h-100">
-          <p class="blog-meta">Backend Development</p>
+          <a
+            href="{% url 'blog_detail' post.slug %}"
+            class="btn btn-primary-custom"
+          >
+            Read Article →
+          </a>
 
-          <h4>What I'm Learning In Django REST Framework</h4>
-
-          <p>
-            Exploring APIs, authentication systems, React integration, and
-            building modern full-stack applications.
-          </p>
-
-          <a href="/blog/" class="card-link"> Read Article → </a>
-        </article>
-      </div>
+        </div>
+      </article>
     </div>
+  {% empty %}
+    <div class="col-12 text-center">
+      <p class="section-description">
+        No articles published yet.
+      </p>
+    </div>
+  {% endfor %}
+</div>
   </div>
 </section>
 
