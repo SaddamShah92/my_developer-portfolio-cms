@@ -47,8 +47,8 @@ body {
 }
 
 .hero-title {
-  font-size: clamp(2.8rem, 5vw, 4.5rem);
-  line-height: 1.05;
+  font-size: clamp(2.4rem, 3.5vw, 3.8rem);
+  line-height: 1.08;
   font-weight: 800;
   color: var(--text-main);
 }
@@ -162,7 +162,8 @@ body {
 }
 
 .section-title {
-  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-size: clamp(2rem, 3.8vw, 2.7rem);
+  line-height: 1.15;
   font-weight: 800;
   color: var(--text-main);
   margin-bottom: 1rem;
@@ -327,7 +328,8 @@ body {
 }
 
 .cta-box h2 {
-  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-size: clamp(2rem, 3.2vw, 2.9rem);
+  line-height: 1.15;
   font-weight: 800;
   margin-bottom: 1rem;
 }
@@ -751,11 +753,6 @@ body {
     height: 100%;
 }
 
-/* Reduce oversized contact heading */
-.contact-form-card .section-title {
-    font-size: clamp(2.5rem, 4vw, 3.2rem);
-    line-height: 1.1;
-}
 
 /* Inputs, textarea, select */
 .contact-form-card input,
