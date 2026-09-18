@@ -169,6 +169,25 @@ body {
   margin-bottom: 1rem;
 }
 
+/* =========================================
+   SECTION HEADER ALIGNMENT
+========================================= */
+
+.section-header {
+  max-width: 760px;
+}
+
+.section-header-centered {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.section-header-left {
+  text-align: left;
+}
+
+
 .feature-card,
 .skill-card,
 .project-card,

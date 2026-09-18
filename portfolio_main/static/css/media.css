@@ -236,3 +236,32 @@
     }
 
 }
+
+/* =========================================
+   MOBILE SECTION ALIGNMENT
+========================================= */
+
+@media (max-width: 767px) {
+
+  /* Standalone section introductions */
+  .section-header {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Content/two-column sections should remain left aligned */
+  .section-header-left {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* Keep card content independent from section heading alignment */
+  .skill-card,
+  .project-card,
+  .why-card,
+  .blog-card {
+    text-align: left;
+  }
+}
